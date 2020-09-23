@@ -1,0 +1,20 @@
+<div class="container">
+  <h1 class="h3 mt-3">
+    Testowy formularz logowania
+  </h1>
+  <form>
+    <div class="form-group">
+      <label for="login">Login*</label> <br>
+      <input id="login" type="text" [(ngModel)]="login" name="login"/> <br> 
+    </div>
+    <div class="form-group">
+      <label for="password">Hasło*</label> <br>
+      <input id="password" type="password" [(ngModel)]="password" name="password"/> <br>
+    </div>
+    <p>Pola oznaczone "*" są wymagane.</p>
+    <button type="submit" class="btn btn-primary" [disabled]="login == '' || password == ''" (click)="showModal()">Submit</button>
+  </form>
+</div>
+
+
+<app-modal></app-modal>
