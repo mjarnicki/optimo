@@ -10,8 +10,8 @@ export class FormComponent {
 
   constructor(private loginService: LogInService) {}
 
-  login: string;
-  password: string;
+  login: string = '';
+  password: string = '';
 
   ngOnInit() {
     this.loginService.resetForm().subscribe(data => {
